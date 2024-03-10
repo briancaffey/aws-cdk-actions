@@ -9,10 +9,9 @@ branding:
 
 # Define your inputs here.
 inputs:
-  milliseconds:
-    description: 'Your input description here'
-    required: true
-    default: '1000'
+  cdk_stack:
+    description: 'AWS CDK stack name to use.'
+    default: '*'
 
 # Define your outputs here.
 outputs:

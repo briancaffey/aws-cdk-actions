@@ -1,3 +1,17 @@
+# AWS CDK Actions
+
+A GitHub Action for running AWS CDK pipelines (deploy, diff, destroy, etc.).
+
+This repo aims to replicate the functionality of this repo: [https://github.com/youyo/aws-cdk-github-actions](https://github.com/youyo/aws-cdk-github-actions) (archived) using a structure that is similar to the GitHub Action defined in this repo: [https://github.com/pulumi/actions](https://github.com/pulumi/actions).
+
+## GitHub Actions documentation
+
+[https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions](https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions)
+
+## Feature Comparison between CDK and Pulumi
+
+[https://www.pulumi.com/docs/concepts/vs/cloud-template-transpilers/aws-cdk/#feature-comparisons](https://www.pulumi.com/docs/concepts/vs/cloud-template-transpilers/aws-cdk/#feature-comparisons)
+
 # Create a GitHub Action Using TypeScript
 
 [![GitHub Super-Linter](https://github.com/actions/typescript-action/actions/workflows/linter.yml/badge.svg)](https://github.com/super-linter/super-linter)
