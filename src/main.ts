@@ -7,12 +7,20 @@ import { exec } from 'child_process';
  */
 export async function run(): Promise<void> {
   try {
-    const stack: string = core.getInput('cdk_stack')
+    const stack: string = core.getInput('cdk_stack');
+    const directory: string = core.getInput('directory');
+
+    process.chdir(directory);
 
     // Debug logs are only output if the `ACTIONS_STEP_DEBUG` secret is true
     core.debug(`Stack is ${stack}...`);
 
-    const command = `cdk deploy -e ${stack}`;
+    let command: string;
+    if (stack == "*") {
+      command = 'cdk deploy --all'
+    } else {
+      command = `cdk deploy -e ${stack}`;
+    }
 
     // execute the command
     exec(command, (error, stdout, stderr) => {

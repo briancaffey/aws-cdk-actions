@@ -13,6 +13,10 @@ inputs:
     description: 'AWS CDK stack name to use.'
     default: '*'
 
+  directory:
+    description: 'Where the CDK command will run'
+    default: '.'
+
 # Define your outputs here.
 outputs:
   time:
