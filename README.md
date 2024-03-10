@@ -2,7 +2,11 @@
 
 A GitHub Action for running AWS CDK pipelines (deploy, diff, destroy, etc.).
 
-This repo aims to replicate the functionality of this repo: [https://github.com/youyo/aws-cdk-github-actions](https://github.com/youyo/aws-cdk-github-actions) (archived) using a structure that is similar to the GitHub Action defined in this repo: [https://github.com/pulumi/actions](https://github.com/pulumi/actions).
+This repo aims to replicate the functionality of this repo:
+[https://github.com/youyo/aws-cdk-github-actions](https://github.com/youyo/aws-cdk-github-actions)
+(archived) using a structure that is similar to the GitHub Action defined in
+this repo:
+[https://github.com/pulumi/actions](https://github.com/pulumi/actions).
 
 ## GitHub Actions documentation
 
