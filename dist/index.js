@@ -24737,6 +24737,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.run = void 0;
 const core = __importStar(__nccwpck_require__(2186));
 const child_process_1 = __nccwpck_require__(2081);
+const path_1 = __nccwpck_require__(1017);
 /**
  * The main function for the action.
  * @returns {Promise<void>} Resolves when the action is complete.
@@ -24745,7 +24746,9 @@ async function run() {
     try {
         const stack = core.getInput('cdk_stack');
         const directory = core.getInput('directory');
-        process.chdir(directory);
+        const currentDir = process.cwd();
+        const dir = (0, path_1.join)(currentDir, directory);
+        process.chdir(dir);
         // Debug logs are only output if the `ACTIONS_STEP_DEBUG` secret is true
         core.debug(`Stack is ${stack}...`);
         let command;

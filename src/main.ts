@@ -1,5 +1,6 @@
 import * as core from '@actions/core'
 import { exec } from 'child_process'
+import { join } from 'path'
 
 /**
  * The main function for the action.
@@ -10,7 +11,10 @@ export async function run(): Promise<void> {
     const stack: string = core.getInput('cdk_stack')
     const directory: string = core.getInput('directory')
 
-    process.chdir(directory)
+    const currentDir = process.cwd()
+    const dir = join(currentDir, directory)
+
+    process.chdir(dir)
 
     // Debug logs are only output if the `ACTIONS_STEP_DEBUG` secret is true
     core.debug(`Stack is ${stack}...`)
